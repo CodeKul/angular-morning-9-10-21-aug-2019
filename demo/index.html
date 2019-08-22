@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Simple demo</title>
+</head>
+
+<body>
+    <div>
+        <!-- Type 1 <input type="text" id="ipNm" onkeyup="ipKeyIn(this.value)"> -->
+        <input type="text" id="ipNm">
+    </div>
+    <div id="dvDt" (keyup)="dt = ipnm" sizer>
+       {{dt}}
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
