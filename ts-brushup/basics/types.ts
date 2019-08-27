@@ -12,3 +12,8 @@ let fn: () => void = function () {
 }
 let gOb: Object = {}
 let aant: any = true
+
+
+function dataIot(ip: string): Array<any> {
+    return new Array()
+}
