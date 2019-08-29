@@ -1,4 +1,4 @@
-# IntroApp
+# IntroApp from codekul; Angular Training in Pune
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.1.
 
