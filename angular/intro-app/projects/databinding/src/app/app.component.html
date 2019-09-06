@@ -2,21 +2,21 @@
   <div class="row mt-3">
     <div class="col-md-12">
       <p class="alert alert-info">
-       {{alTxt}}
+        {{alTxt}}
       </p>
 
       <p class="alert alert-info">
         {{alTxt.toUpperCase()}}
-       </p>
+      </p>
 
-       <p class="alert alert-info">
+      <p class="alert alert-info">
         {{58*45}}
-       </p>
+      </p>
     </div>
   </div>
   <div class="row">
     <div class="col-md-12">
-      
+
       <input [type]="typ">
       <input [type]="'text'">
       <input type="text" [style.border]="brd">
@@ -26,8 +26,9 @@
   </div>
   <div class="row">
     <div class="col-md-12">
-      <input type="button" value="Okay" class="btn btn-info" (click)="clkFn($event)" >
-      <input type="button" value="Okay" class="btn btn-info" (click)="typ='button'" >
+      <input type="button" value="Okay" class="btn btn-info" (click)="clkFn($event)">
+      <input type="button" value="Okay" class="btn btn-info" (click)="typ='button'">
     </div>
   </div>
-  </div>
+  <app-data-binding-example></app-data-binding-example>
+</div>
