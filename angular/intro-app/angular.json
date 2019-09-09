@@ -509,6 +509,125 @@
           }
         }
       }
-    }},
+    },
+    "custom-events-properties": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/custom-events-properties",
+      "sourceRoot": "projects/custom-events-properties/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/custom-events-properties",
+            "index": "projects/custom-events-properties/src/index.html",
+            "main": "projects/custom-events-properties/src/main.ts",
+            "polyfills": "projects/custom-events-properties/src/polyfills.ts",
+            "tsConfig": "projects/custom-events-properties/tsconfig.app.json",
+            "aot": false,
+            "assets": [
+              "projects/custom-events-properties/src/favicon.ico",
+              "projects/custom-events-properties/src/assets"
+            ],
+            "styles": [
+              "projects/custom-events-properties/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/custom-events-properties/src/environments/environment.ts",
+                  "with": "projects/custom-events-properties/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "custom-events-properties:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "custom-events-properties:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "custom-events-properties:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/custom-events-properties/src/test.ts",
+            "polyfills": "projects/custom-events-properties/src/polyfills.ts",
+            "tsConfig": "projects/custom-events-properties/tsconfig.spec.json",
+            "karmaConfig": "projects/custom-events-properties/karma.conf.js",
+            "assets": [
+              "projects/custom-events-properties/src/favicon.ico",
+              "projects/custom-events-properties/src/assets"
+            ],
+            "styles": [
+              "projects/custom-events-properties/src/styles.css"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/custom-events-properties/tsconfig.app.json",
+              "projects/custom-events-properties/tsconfig.spec.json",
+              "projects/custom-events-properties/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/custom-events-properties/e2e/protractor.conf.js",
+            "devServerTarget": "custom-events-properties:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "custom-events-properties:serve:production"
+            }
+          }
+        }
+      }
+    }
+    },
   "defaultProject": "intro-app"
 }
