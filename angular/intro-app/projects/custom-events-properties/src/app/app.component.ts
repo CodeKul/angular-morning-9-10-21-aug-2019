@@ -1,3 +1,4 @@
+import { CardEvent } from './my-card/my-card.event';
 import { CardInfo } from './my-card/card.domain';
 import { Component } from '@angular/core';
 
@@ -14,5 +15,9 @@ export class AppComponent {
     title: 'Bootstrap',
     info: 'What is Bootstrap? Bootstrap is a free front-end framework for faster and easier web development; Bootstrap includes HTML and CSS based design templates ...',
     navUrl: 'https://getbootstrap.com/docs/4.0/components/card/'
+  }
+
+  onOkay(evDt: CardEvent) {
+    console.log(evDt)
   }
 }
