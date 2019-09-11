@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CompComComponent implements OnInit {
 
-  curPrg = 50
+  curPrg = 0
   constructor() { }
 
   ngOnInit() {

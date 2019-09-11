@@ -5,8 +5,8 @@ import { Component, OnInit, Input } from '@angular/core';
   template: `
     <div class="progress">
       <div 
-        class="progress-bar" 
-        role="progressbar" 
+        [class.progress-bar]="true" 
+        [attr.role]="'progressbar'" 
         [style.width.%]="wd" 
         [attr.aria-valuenow]="wd" 
         aria-valuemin="0" 

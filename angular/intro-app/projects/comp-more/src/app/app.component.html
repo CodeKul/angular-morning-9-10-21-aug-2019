@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row" #rw>
+    <div class="col-md-12">
+      <input type="text" #usNm>
+      <input type="button" value="Okay" class="btn btn-info" (click)="clk()">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <app-my-cmp>
+        <p class="alert alert-info">
+          We only set a height value on the .progress, so if you change that value the inner .progress-bar will automatically resize accordingly.
+        </p>
+      </app-my-cmp>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <app-my-cmp>
+        <input type="button" class="btn btn-primary" value="Okay" #dt>
+      </app-my-cmp>
+    </div>
+  </div>
+</div>
