@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="row" *ngIf="isVs">
+    <div class="col-md-12">
+      <p class="alert alert-info">
+        Structural directives are responsible for HTML layout. They shape or reshape the DOM's structure, typically by
+        adding, removing, or manipulating elements.
+      </p>
+    </div>
+  </div>
+  <ng-template [ngIf]="isVs">
+    <div class="row">
+      <div class="col-md-12">
+        <p class="alert alert-info">
+          Structural directives are responsible for HTML layout. They shape or reshape the DOM's structure, typically by
+          adding, removing, or manipulating elements.
+        </p>
+      </div>
+    </div>
+  </ng-template>
+  <div class="row">
+    <div class="col-md-12">
+      <input type="button" value="Okay" class="btn btn-info" (click)="isVs = !isVs">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <ol>
+        <li *ngFor="let mb of mobiles;let i = index;">{{mb.os}} ==> {{i}}</li>
+      </ol>
+    </div>
+  </div>
+  <div class="row border border-primary" *appUnless="false">
+    <div class="col-md-12">
+      <p class="alert alert-info">
+        Structural directives are responsible for HTML layout. They shape or reshape the DOM's structure, typically by
+        adding, removing, or manipulating elements.
+      </p>
+    </div>
+  </div>
+
+  <ng-template [appUnless]="false">
+    <div class="row border border-primary" >
+      <div class="col-md-12">
+        <p class="alert alert-info">
+          Structural directives are responsible for HTML layout. They shape or reshape the DOM's structure, typically by
+          adding, removing, or manipulating elements.
+        </p>
+      </div>
+    </div>
+  </ng-template>
+</div>
