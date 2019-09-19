@@ -29,7 +29,7 @@
       </ol>
     </div>
   </div>
-  <div class="row border border-primary" *appUnless="false">
+  <div class="row border border-primary" *appUnless="true">
     <div class="col-md-12">
       <p class="alert alert-info">
         Structural directives are responsible for HTML layout. They shape or reshape the DOM's structure, typically by
@@ -38,14 +38,27 @@
     </div>
   </div>
 
-  <ng-template [appUnless]="false">
+  <ng-template [appUnless]="true" >
     <div class="row border border-primary" >
       <div class="col-md-12">
         <p class="alert alert-info">
           Structural directives are responsible for HTML layout. They shape or reshape the DOM's structure, typically by
           adding, removing, or manipulating elements.
         </p>
-      </div>
+      </div>true
     </div>
   </ng-template>
+  <div class="row" [ngClass]="{ 'border' : true, 'border-primary' : isVs }">
+    <div class="col-md-12">
+      <p [ngClass]="{ 'alert' : true, 'alert-info' : true }">
+        Structural directives are responsible for HTML layout. They shape or reshape the DOM's structure, typically by
+        adding, removing, or manipulating elements.
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <input type="text"  [ngStyle]="{ 'border' : '1px solid red' }" [appSizer]="200">
+    </div>
+  </div>
 </div>
