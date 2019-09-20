@@ -25,7 +25,10 @@
       "demo-lib/*": [
         "dist/demo-lib/*"
       ]
-    }
+    },
+    "strict": true,
+    "noImplicitAny": true,
+    "strictPropertyInitialization": false
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
