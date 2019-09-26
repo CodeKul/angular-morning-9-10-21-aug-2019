@@ -5,7 +5,7 @@ import { MyService } from '../my-service.service';
   selector: 'app-cmp',
   templateUrl: './cmp.component.html',
   styleUrls: ['./cmp.component.css'],
-  providers: [MyService]
+  // providers: [MyService]
 })
 export class CmpComponent implements OnInit {
 
@@ -19,5 +19,6 @@ export class CmpComponent implements OnInit {
 
   onOk() {
     this.cnt = this.ms.num++
+    this.ms.em.emit(`${this.cnt}`)
   }
 }
