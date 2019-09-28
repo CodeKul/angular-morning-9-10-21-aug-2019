@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { ChatComponent } from './chat/chat.component';
 import { DashComponent } from './dash/dash.component';
 import { LoginComponent } from './login/login.component';
+import { SalesChatComponent } from './sales-chat/sales-chat.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ChatComponent,
     DashComponent,
-    LoginComponent
+    LoginComponent,
+    SalesChatComponent
   ],
   imports: [
     BrowserModule,

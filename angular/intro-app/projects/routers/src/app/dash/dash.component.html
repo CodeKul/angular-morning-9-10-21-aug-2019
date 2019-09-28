@@ -9,6 +9,12 @@
 <div class="row">
     <div class="col-md-12">
         <a [routerLink]="['/chat', 'chatBot']" [queryParams]="{'clone' : true}">Chatbot - CodeBot</a>
+        <a [routerLink]="['sales']">Sales Chat</a>
     </div>
 </div>
 
+<div class="row">
+    <div class="col-md-12">
+        <router-outlet></router-outlet>
+    </div>
+</div>

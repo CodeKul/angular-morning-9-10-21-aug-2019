@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-dash',
@@ -9,10 +9,12 @@ import { Router } from '@angular/router';
 export class DashComponent implements OnInit {
 
   constructor(
-    private router: Router
+    private router: Router,
+   
   ) { }
 
   ngOnInit() {
+
   }
 
   onChat(usr: string) {
