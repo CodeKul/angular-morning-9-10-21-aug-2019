@@ -1,22 +1,42 @@
 <form #frm="ngForm" (ngSubmit)="onSub(frm)">
     <div class="row">
         <div class="col-md-12">
-            <input type="text" name="usNm" placeholder="User Name" ngModel>
+            <input type="text" name="usNm" placeholder="User Name" #usNm="ngModel" ngModel required>
+        </div>
+    </div>
+    <div class="row" *ngIf="usNm.errors">
+        <div class="col-md-12">
+            <label>Enter Valid User Name</label>
         </div>
     </div>
     <div class="row">
         <div class="col-md-12">
-            <input type="text" name="pass" placeholder="Password" ngModel>
+            <input type="number" name="pass" placeholder="Password"  #pass="ngModel" ngModel required>
+        </div>
+    </div>
+    <div class="row" *ngIf="pass.errors">
+        <div class="col-md-12">
+            <label>Enter Valid Password</label>
+        </div>
+    </div>
+    <div class="row" >
+        <div class="col-md-12">
+            <input type="text" name="email" placeholder="Email" #eml="ngModel" ngModel pattern="{{emlPat}}" required>
+        </div>
+    </div>
+    <div class="row" *ngIf="eml.errors?.required">
+            <div class="col-md-12">
+                <label>Enter Email</label>
+            </div>
+        </div>
+    <div class="row" *ngIf="eml.errors?.pattern">
+        <div class="col-md-12">
+            <label>Enter Valid Email</label>
         </div>
     </div>
     <div class="row">
         <div class="col-md-12">
-            <input type="text" name="email" placeholder="Email" ngModel>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <input type="submit" value="Save">
+            <input type="submit" value="Save" [disabled]="!frm.valid">
         </div>
     </div>
 </form>

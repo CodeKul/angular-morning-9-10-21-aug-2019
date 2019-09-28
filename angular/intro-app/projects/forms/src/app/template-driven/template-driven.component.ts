@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { NgForm, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-template-driven',
@@ -7,6 +7,8 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./template-driven.component.css']
 })
 export class TemplateDrivenComponent implements OnInit {
+
+  emlPat = "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
 
   constructor() { }
 
