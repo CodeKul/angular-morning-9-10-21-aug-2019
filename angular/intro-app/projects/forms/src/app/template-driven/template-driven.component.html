@@ -1,0 +1,22 @@
+<form #frm="ngForm" (ngSubmit)="onSub(frm)">
+    <div class="row">
+        <div class="col-md-12">
+            <input type="text" name="usNm" placeholder="User Name" ngModel>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <input type="text" name="pass" placeholder="Password" ngModel>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <input type="text" name="email" placeholder="Email" ngModel>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <input type="submit" value="Save">
+        </div>
+    </div>
+</form>
