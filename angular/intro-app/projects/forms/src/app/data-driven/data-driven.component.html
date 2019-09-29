@@ -1,1 +1,47 @@
-<p>data-driven works!</p>
+<form novalidate (ngSubmit)="mySub()" [formGroup]="fg">
+    <div class="row">
+        <div class="col-md-12">
+            <input type="text" formControlName="usNm" placeholder="User Name">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <label *ngIf="fg.controls.usNm.errors">Enter Valid User Name</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <input type="number" formControlName="pass" placeholder="Password">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <label *ngIf="fg.controls.pass.errors?.required">Enter Password</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <label *ngIf="fg.controls.pass.errors?.myPass">Enter Valid Password</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <input type="text" formControlName="eml" placeholder="Email">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <label *ngIf="fg.controls.eml.errors?.required">Enter Email</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <label *ngIf="fg.controls.eml.errors?.email">Enter Valid Email</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <input type="submit" value="Save" [disabled]="!fg.valid">
+        </div>
+    </div>
+</form>
